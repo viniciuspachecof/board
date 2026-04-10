@@ -6,7 +6,10 @@ interface SectionRootProps extends ComponentProps<'div'> {}
 function SectionRoot({ className, ...props }: SectionRootProps) {
   return (
     <div
-      className={twMerge('bg-navy-800 rounded-xl border-[0.5px] border-navy-500 pt-3 flex flex-col gap-1', className)}
+      className={twMerge(
+        'bg-navy-800 rounded-xl border-[0.5px] border-navy-500 pt-3 flex flex-col gap-1 relative',
+        className,
+      )}
       {...props}
     />
   );
@@ -38,7 +41,15 @@ function SectionIssueCount({ className, ...props }: SectionIssueCountProps) {
 interface SectionContentProps extends ComponentProps<'div'> {}
 
 function SectionContent({ className, ...props }: SectionContentProps) {
-  return <div className={twMerge('flex flex-col gap-2.5 overflow-y-auto p-3', className)} {...props} />;
+  return (
+    <div
+      className={twMerge(
+        'flex flex-col gap-2.5 overflow-y-auto p-3 absolute inset-0 top-10 scrollbar scrollbar-thumb-navy-600 scrollbar-track-transparent',
+        className,
+      )}
+      {...props}
+    />
+  );
 }
 
 export const Section = {
