@@ -1,6 +1,6 @@
 'use client';
 
-import { ArchiveIcon, MessageCircleIcon, ThumbsUpIcon } from 'lucide-react';
+import { ArchiveIcon, MessageCircleIcon } from 'lucide-react';
 import { Section } from '@/components/section';
 import { Card } from '@/components/card';
 import { Button } from '@/components/button';
