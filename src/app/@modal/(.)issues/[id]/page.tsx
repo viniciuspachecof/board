@@ -2,7 +2,6 @@ import { Modal } from '@/components/modal';
 import { BackButton } from './back-button';
 import { DialogTitle } from '@radix-ui/react-dialog';
 import { IssueDetails } from '@/app/issues/[id]/issue-details';
-import { Suspense } from 'react';
 
 interface IssuePageProps {
   params: Promise<{ id: string }>;
@@ -18,9 +17,7 @@ export default async function IssueModal({ params }: IssuePageProps) {
 
         <DialogTitle className="sr-only">Issue details</DialogTitle>
 
-        <Suspense fallback={null}>
-          <IssueDetails issueId={id} />
-        </Suspense>
+        <IssueDetails issueId={id} />
       </div>
     </Modal>
   );
