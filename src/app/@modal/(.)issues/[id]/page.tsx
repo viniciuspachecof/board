@@ -4,8 +4,6 @@ import { DialogTitle } from '@radix-ui/react-dialog';
 import { IssueDetails } from '@/app/issues/[id]/issue-details';
 import { Suspense } from 'react';
 
-export const dynamic = 'force-dynamic';
-
 interface IssuePageProps {
   params: Promise<{ id: string }>;
 }
